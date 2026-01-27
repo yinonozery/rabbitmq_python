@@ -44,15 +44,15 @@ If you prefer not to use Docker, follow the official installation guides:
 * Linux (Ubuntu/Debian): `sudo apt-get install rabbitmq-server`.
 Once installed, ensure the service is running: `sudo service rabbitmq-server start`.
 
-## 3. Running the Demo
+### 3. Running the Demo
 
-### Step 1: Start the Consumer
+#### Step 1: Start the Consumer
 The consumer will wait for messages to arrive in the `ABC` queue.
 ```bash
 python3 consumer.py
 ```
 
-### Step 2: Run the Publisher
+#### Step 2: Run the Publisher
 The publisher will send 10 messages to the queue and then exit.
 ```bash
 python3 publisher.py
