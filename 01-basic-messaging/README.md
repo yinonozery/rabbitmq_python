@@ -5,8 +5,6 @@ This directory contains the foundational implementation of a Point-to-Point (P2P
 
 This example highlights the decoupling of systems: the publisher doesn't need to know if the consumer is active when the messages are sent.
 
----
-
 ## Technology Stack
 - **Language:** Python 3.x
 - **Message Broker:** RabbitMQ
@@ -29,8 +27,25 @@ This example highlights the decoupling of systems: the publisher doesn't need to
 pip install pika
 ```
 
-### 2. Run RabbitMQ
-You can run RabbitMQ using Docker (recommended) or by installing it directly on your OS.
+### 2. Environment Configuration
+The project is pre-configured with default values. You can find a template in `.env.example.`
+* Note: If you use the automated script (`run_demo.sh`), it will handle all environment variables for you automatically.
+
+---
+
+### Running the Demo
+### *Automated*
+The easiest way to run the project on Linux/macOS is using the provided shell script. It handles Docker setup, environment variables, and execution in one command:
+```bash
+chmod +x run_demo.sh
+./run_demo.sh
+```
+
+---
+
+### *Manual*
+If you prefer to run the components manually, follow these steps:
+### Step 1: Run RabbitMQ
 
 **Option A: Using Docker (Recommended)**
 ```bash
@@ -38,21 +53,20 @@ docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management
 ```
 
 **Option B: Local Installation (No Docker)**
+
 If you prefer not to use Docker, follow the official installation guides:
 * Windows: Install via Chocolatey (`choco install rabbitmq`) or the official installer.
 * macOS: Install via Homebrew (`brew install rabbitmq`).
 * Linux (Ubuntu/Debian): `sudo apt-get install rabbitmq-server`.
 Once installed, ensure the service is running: `sudo service rabbitmq-server start`.
 
-## 3. Running the Demo
-
-### Step 1: Start the Consumer
+### Step 2: Start the Consumer
 The consumer will wait for messages to arrive in the `ABC` queue.
 ```bash
 python3 consumer.py
 ```
 
-### Step 2: Run the Publisher
+### Step 3: Run the Publisher
 The publisher will send 10 messages to the queue and then exit.
 ```bash
 python3 publisher.py
