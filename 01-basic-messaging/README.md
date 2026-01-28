@@ -41,7 +41,7 @@ chmod +x run_demo.sh
 ./run_demo.sh
 ```
 
----
+***
 
 ### *Manual*
 If you prefer to run the components manually, follow these steps:
