@@ -20,8 +20,22 @@ fi
 echo "📦 Starting RabbitMQ container..."
 docker rm -f rabbitmq 2>/dev/null || true
 docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management
-echo "⏳ Waiting for RabbitMQ to start (15s)..."
-sleep 15
+sleep 5
+echo "⏳ Waiting for RabbitMQ to be fully operational..."
+set +e 
+while true; do
+
+  docker exec rabbitmq rabbitmqctl status > /dev/null 2>&1
+
+  if [ $? -eq 0 ]; then
+    echo "✅ RabbitMQ is up and running!"
+    break
+  fi
+
+  echo "Still starting... (checking every 3s)"
+  sleep 3
+done
+set -e 
 
 # 3. Open Terminals for Workers and Publisher
 echo "🏁 Opening terminals for Workers and Publisher..."
