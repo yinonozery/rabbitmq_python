@@ -47,7 +47,7 @@ chmod +x run_demo.sh
 
 ## 📖 Key Concepts Covered
 
-* **Reliability:**Message persistence and manual acknowledgments (ACKs).
+* **Reliability:** Message persistence and manual acknowledgments (ACKs).
 * **Scalability:** Load balancing between multiple consumers.
 * **Flexibility:** Dynamic routing using various Exchange types.
 * **Automation:** Health-checking the broker before execution.
