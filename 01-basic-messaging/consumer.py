@@ -48,6 +48,7 @@ def main():
     except KeyboardInterrupt:
         pass
     finally:
+        channel.cancel()
         connection.close()
         print("[consumer] closed")
 

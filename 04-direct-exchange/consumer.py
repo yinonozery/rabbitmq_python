@@ -54,6 +54,7 @@ def main():
     except KeyboardInterrupt:
         pass
     finally:
+        channel.cancel()
         connection.close()
 
 if __name__ == "__main__":
