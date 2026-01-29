@@ -1,4 +1,4 @@
-# 4. Routing (Direct Exchange)
+# 04. Routing (Direct Exchange)
 
 ## Overview
 

@@ -1,4 +1,4 @@
-# 3. Publish/Subscribe (Fanout Exchange)
+# 03. Publish/Subscribe (Fanout Exchange)
 
 ## Overview
 
