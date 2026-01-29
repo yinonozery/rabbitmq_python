@@ -1,4 +1,3 @@
-
 # 3. Publish/Subscribe (Fanout Exchange)
 
 ## Overview
@@ -40,7 +39,7 @@ The project is pre-configured with default values within the scripts.
 
 ---
 
-### Running the Demo
+## Running the Demo
 
 ### *Automated*
 
@@ -74,7 +73,7 @@ If you prefer not to use Docker, follow the official installation guides:
 * Linux (Ubuntu/Debian): `sudo apt-get install rabbitmq-server`.
   Once installed, ensure the service is running: `sudo service rabbitmq-server start`.
 
-## Step 2: Start Multiple Subscribers
+### Step 2: Start Multiple Subscribers
 
 Open **TWO** separate terminals and run the consumer in each:
 

@@ -1,4 +1,3 @@
-
 # 02. Work Queues (Task Distribution)
 
 ## Overview
@@ -40,7 +39,7 @@ The project is pre-configured with default values within the scripts.
 
 ---
 
-### Running the Demo
+## Running the Demo
 
 ### *Automated*
 
@@ -73,7 +72,6 @@ If you prefer not to use Docker, follow the official installation guides:
 * macOS: Install via Homebrew (`brew install rabbitmq`).
 * Linux (Ubuntu/Debian): `sudo apt-get install rabbitmq-server`.
   Once installed, ensure the service is running: `sudo service rabbitmq-server start`.
-
 
 ### Step 2: Start the Consumer
 
